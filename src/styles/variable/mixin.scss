@@ -1,0 +1,52 @@
+/*
+ * mixin
+ */
+
+//flexbox
+@mixin flex($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @content;
+}
+
+//position: absolute
+@mixin absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//font-size
+@mixin rem($size: 16) {
+    font-size: ($size / 10) + rem;
+}
+
+//font-weight
+@mixin weight($size: bold) {
+    font-weight: $size;
+}
+
+//border-radius
+@mixin radius($size) {
+    border-radius: ($size) + px;
+}
+
+//text-align
+@mixin talign($position: center) {
+    text-align: $position;
+}
+
+//vertical-align
+@mixin valign($position: middle) {
+    vertical-align: $position;
+}
+
+//mediaquery
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+}

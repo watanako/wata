@@ -1,0 +1,89 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+
+// .h1-tag {
+//     margin-top: 40px;
+// }
+.container {
+    margin: 40px 0 30px;
+    &:last-of-type {
+        margin-bottom: 60px;
+    }
+}
+.container_title {
+    @include rem(28);
+    padding-bottom: 5px;
+    border-bottom: 2px solid $main;
+    margin-bottom: 15px;
+    //position: relative;
+    a {
+       @include rem(28);
+       color: $text;
+       transition: 0.9s;
+       &:hover {
+           opacity: 0.8;
+       }
+    }
+}
+.container_summary {
+   margin-bottom: 10px;
+}
+.container_info {
+   @include flex();
+   @include rem(14);
+   margin-bottom: 15px;
+    .container_icon{
+        color: $main;
+        margin-right: 10px;
+    }
+}
+.container_tag {
+    ul {
+       @include flex();
+    }
+    li {
+        margin-left: 10px;
+        border-bottom: 1px solid $white;
+        transition: 0.5s;
+        &:first-of-type {
+            color: $main;
+        }
+    }
+    a {
+        color: $accent;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .container_tagicon {
+        color: $main;
+    }
+}
+
+.h1 {
+    @include rem(32);
+    margin-bottom: 5px;
+}
+// .h2 {
+//     @include rem(28);
+//     padding-bottom: 5px;
+//     margin-bottom: 30px;
+//     border-bottom: 2px solid $main;
+//     position: relative;
+// }
+.h3 {
+    @include rem(24);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px $main;
+}
+.h4 {
+    @include rem(20);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+// .p {
+//     margin-bottom: 10px;
+// }

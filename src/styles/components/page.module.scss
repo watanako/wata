@@ -1,0 +1,17 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+
+.container {
+    margin: 20px 0 40px;
+}
+.h1 {
+    @include rem(32);
+    margin-bottom: 30px;
+}
+.h2 {
+    @include rem(26);
+    margin-top: 20px;
+}
+.disc {
+    list-style-type: disc;
+}

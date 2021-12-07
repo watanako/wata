@@ -1,0 +1,68 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+
+.contact-area {
+    margin-bottom: 60px;
+}
+.extlink {
+    margin: 0 5px;
+}
+.essential {
+    background: $main;
+    color: #fafafa;
+    @include rem(12);
+    padding: 3px 10px;
+    font-weight: normal;
+    margin-left: 10px;
+    @include valign(text-bottom);
+}
+.text {
+    margin-bottom: 30px;
+}
+.contact-inner {
+    width: 90%;
+    @include mq() {
+        width: 100%;
+    }
+}
+.contact-table {
+    width: 100%;
+}
+.table-list {
+    @include flex();
+    margin-bottom: 20px;
+    @include mq() {
+        flex-wrap: wrap;
+    }
+}
+.table-left {
+    width: 30%;
+    @include talign(left);
+    @include mq() {
+        width: 100%;
+    }
+}
+.table-right {
+    width: 70%;
+    @include mq() {
+        width: 100%;
+    }
+}
+.input-area {
+    width: 100%;
+}
+.input-area2 {
+    width: 100%;
+    height: calc( 1.6rem * 10 );
+    line-height: 1.5;
+}
+.submit {
+    @include talign();
+}
+.submit-btn {
+    color: $text;
+    cursor: pointer;
+    @include rem(18);
+    padding: 10px;
+    width: 200px;
+}

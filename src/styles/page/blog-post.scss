@@ -1,0 +1,67 @@
+// variable
+@import "../variable/define.scss";
+@import "../variable/mixin.scss";
+
+.post {
+    margin: 40px 0 60px;
+    width: 100%;
+    h1 {
+        @include rem(32);
+        margin-bottom: 5px;
+    }
+    h2 {
+        @include rem(28);
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid $main;
+        position: relative;
+    }
+    h3 {
+        @include rem(24);
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: solid 1px $main;
+    }
+    h4 {
+        @include rem(20);
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.post_data_container {
+    @include flex($justify: flex-start);
+    margin-bottom: 30px;
+}
+.post_data {
+    margin: 0 20px 0 0;
+}
+.post_tags {
+    @include flex($justify: flex-start);
+    padding-left: 0;
+    margin: 0;
+}
+.post_tag {
+    margin-left: 10px;
+    &:not(:last-of-type) a:after {
+        content: ',';
+    }
+}
+.post_content {
+    margin-bottom: 40px;
+}
+.next_post {
+    @include flex();
+    padding-left: 0;
+    .next {
+        margin-left: 10px;
+    }
+    .prev {
+        margin-right: 10px;
+    }
+}

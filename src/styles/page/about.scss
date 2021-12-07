@@ -1,0 +1,25 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+
+.title {
+    @include rem(50);
+}
+.breadcrumb {
+    @include flex($justify: flex-start, $align: flex-start);
+    margin-top: 20px 0 20px;;
+}
+.breadcrumb-home {
+    .fa-home {
+        margin-right: 5px;
+    }
+}
+.breadcrumb-last {
+    &:before {
+        content: '>';
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+.about-container {
+    margin-top: 20px;
+}

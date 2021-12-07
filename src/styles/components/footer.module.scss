@@ -1,0 +1,18 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+.footer {
+    background: $main;
+    p {
+        max-width: $width;
+        padding: 10px 0;
+        margin: 0 auto;
+        color: $white;
+        @include talign();
+        @include mq(tab) {
+            width: 90%;
+        }
+        @include mq() {
+            width: 90%;
+        }
+    }
+}

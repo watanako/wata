@@ -1,0 +1,84 @@
+@import '../variable/define.scss';
+@import '../variable/mixin.scss';
+
+.tp-container {
+    height: calc(100vh - 108px);
+    @include flex($justify: center, $align: center);
+    @include mq(tab) {
+        height: calc(100vh - 100px);
+    }
+    @include mq() {
+        height: calc(100vh - 100px);
+    }
+}
+.contents {
+    width: 60%;
+    @include flex();
+    margin: 0 auto;
+    @include mq(tab) {
+        width: 80%;
+        flex-wrap: wrap;
+        margin: 40px 0;
+    }
+    @include mq() {
+        width: 80%;
+    }
+}
+.content {
+    width: 136px;
+    @include talign();
+    @include mq() {
+        width: 120px;
+        margin-bottom: 35px;
+    }
+    a {
+        @include radius(10);
+        border: 4px solid $main;
+        color: $main;
+        padding: 10px;
+        display: block;
+        transition: 0.5s;
+        &:hover {
+            color: $sub;
+            border: 4px solid $sub;
+        }
+        @include mq() {
+            padding: 10px;
+            border: 2px solid $main;
+        } 
+    }
+    .faicon {
+        margin-bottom: 10px;
+    }
+    .name {
+        @include mq() {
+            @include rem(15);
+            margin-bottom: 0;
+        }
+    }
+}
+
+//breadcrumb
+.breadcrumb {
+    @include flex($justify: flex-start, $align: flex-start);
+    margin: 20px 0 20px;
+}
+.breadcrumb-home {
+    .fa-home {
+        margin-right: 5px;
+    }
+}
+.breadcrumb-last {
+    &:before {
+        content: '>';
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+.breadcrumb-gt {
+    &:before {
+        content: '>';
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

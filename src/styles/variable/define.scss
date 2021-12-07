@@ -1,0 +1,22 @@
+//変数宣言
+@charset "utf-8";
+
+// color
+$black: #000;
+$white: #fff;
+
+$main: #f72849;
+$sub: #f794a5;
+$accent: #28b2f7;
+
+//text
+$text: #1b2249;
+
+//width
+$width: 90%;
+$max-width: 800px;
+//breakpoint
+$breakpoints: (
+  'sp': 'screen and (max-width: 599px)',
+  'tab': 'screen and (max-width: 768px)',
+) !default;
