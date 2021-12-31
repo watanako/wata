@@ -25,7 +25,7 @@ const BlogPost = ( {data, pageContext, location } ) => {
       <div className={StylesPost.post}>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div className={StylesPost.post_data_container}>
-        <p className={StylesPost.post_data}><FontAwesomeIcon icon={ faCalendarAlt } />{data.markdownRemark.frontmatter.dateFmt}</p>
+        <p className={StylesPost.post_data}><FontAwesomeIcon className={StylesPost.fa_pd} icon={ faCalendarAlt } />{data.markdownRemark.frontmatter.dateFmt}</p>
           <ul className={StylesPost.post_tags}>
             <li><FontAwesomeIcon icon={ faTag } /></li>
             {data.markdownRemark.frontmatter.tags.map((tag, index) => (

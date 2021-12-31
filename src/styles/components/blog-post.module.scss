@@ -7,7 +7,7 @@
     width: 100%;
     h1 {
         @include rem(32);
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     h2 {
         @include rem(26);
@@ -18,7 +18,7 @@
     }
     h3 {
         @include rem(24);
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         padding-bottom: 5px;
         border-bottom: solid 1px $main;
     }
@@ -32,14 +32,25 @@
     p {
         margin-bottom: 10px;
     }
+    p + h3 {
+        margin: 40px 0;
+    }
+    p > span {
+        margin: 40px 0;
+    }
+
 }
 
 .post_data_container {
     @include flex($justify: flex-start, $align: baseline);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .post_data {
     margin: 0 20px 0 0;
+    
+}
+.fa_pd {
+    margin-right: 10px;
 }
 .post_tags {
     @include flex($justify: flex-start);
